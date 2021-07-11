@@ -10,6 +10,15 @@ rule all:
     input:
         expand(f"{OUTDIR}/{{idx}}.search.csv", idx=INDEX_LIST)
 
+rule select_to_picklists:
+    params:
+        index_dir = INDEX_DIR,
+        prefix = PICKLIST_PREFIX,
+    shell: """
+        ../2021-sourmash-mom/mom-select-to-picklists.py \
+            {params.index_dir}/*.db --output-prefix {params.prefix} -k 31 --dna
+    """
+
 rule search_idx:
     input:
         query = QUERY,
