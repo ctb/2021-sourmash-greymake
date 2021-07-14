@@ -1,6 +1,8 @@
 # parallel search of sourmash databases with snakemake using manifests of manifests
 
-(You'll need [2021-sourmash-mom](https://github.com/ctb/2021-sourmash-mom) to run the below.)
+(You'll need
+[2021-sourmash-mom](https://github.com/ctb/2021-sourmash-mom) to run
+the below.)
 
 ## Quickstart
 
